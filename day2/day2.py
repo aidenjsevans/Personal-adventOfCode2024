@@ -1,6 +1,6 @@
 import csv
 
-
+#Function for part 1 of the problem
 def func1(matrix):
     safeReports = 0
 
@@ -29,7 +29,6 @@ def func1(matrix):
     return safeReports
 
 def test():
-
     testMatrix = [["7","6","4","2","1"],
                   ["1","2","7","8","9"],
                   ["9","7","6","2","1"],
@@ -37,8 +36,12 @@ def test():
                   ["8","6","4","4","1"],
                   ["1","3","6","7","9"]]
 
-    testSafeReports = func1(testMatrix)
-    print(testSafeReports)
+    print(f"\nTest matrix: \n")
+
+    for row in testMatrix:
+        print(f"\t{row}")
+
+    print(f"\n\tSafe reports: {func1(testMatrix)}")
 
 def main():
     matrix = []
@@ -49,8 +52,12 @@ def main():
         for row in data:
             matrix.append(row)
 
-    print(func1(matrix))
+    print(f"\n\tSafe reports: {func1(matrix)}")
 
 if __name__ == '__main__':
+    print(f"\nTEST CASE")
     test()
+
+    print(f"\nSOLUTION")
     main()
+
